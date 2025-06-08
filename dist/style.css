@@ -44,7 +44,7 @@ body.dark {
     --body-color: #202425;
     --box-color: #fff;
 
-    --nav-color: #262425;
+    --nav-color:none;
     --color-white: #fff;
     --text-color: #fff;
 
@@ -938,7 +938,7 @@ footer {
 
 
 
-.loader-wrapper {
+/* .loader-wrapper {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -968,10 +968,7 @@ footer {
 .loader-wrapper.hidden {
     opacity: 0;
     visibility: hidden;
-}
-
-
-
+} */
 
 .logo-box {
     position: absolute;
@@ -996,6 +993,35 @@ footer {
     font-size: 10px;
     font-weight: bold;
     color: #8749f2;
-  }
+  } 
+
+
   
-  
+
+  body {
+    overflow-x: hidden;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+body {
+    background: var(--body-color);
+    overflow-x: hidden; /* 👈 Add this */
+}
+
+
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* 👈 Add this */
+}
+
+
+
+
+
+
+

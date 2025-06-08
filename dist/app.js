@@ -10,7 +10,7 @@ function myMenuFunction() {
 
 /*--Dark Mode---*/
 const body1 = document.querySelector("body");
-    toggleSwitch = document.getElementById("toggle-switch");
+toggleSwitch = document.getElementById("toggle-switch");
 
 toggleSwitch.addEventListener("click", () => {
     body1.classList.toggle("dark");
@@ -74,6 +74,8 @@ srRight.reveal(".skill", { delay: 100 });
 srRight.reveal(".skill-box", { delay: 100 });
 
 
+
+
 /*----- Active Link----*/
 // const sections = document.querySelectorAll(".section[id]");
 
@@ -124,14 +126,3 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    var loaderWrapper = document.querySelector(".loader-wrapper");
-
-    window.addEventListener("load", function () {
-        setTimeout(function () {
-            loaderWrapper.classList.add("hidden");
-        }, 1000);
-    });
-});

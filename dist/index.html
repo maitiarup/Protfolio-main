@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+
+
+
+   
+    <style>
+        /* Loader container */
+        #loader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 9999;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: opacity 0.5s ease;
+        }
+    
+        /* Hide loader */
+        #loader.hidden {
+          opacity: 0;
+          pointer-events: none;
+        }
+    
+        /* Loader styles from Uiverse by Cobp */
+        .loader {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          perspective: 780px;
+        }
+    
+        .load-inner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          border-radius: 50%;
+        }
+    
+        .load-inner.load-one {
+          left: 0%;
+          top: 0%;
+          border-bottom: 3px solid #6e0dee;
+          animation: rotate1 1.15s linear infinite;
+        }
+    
+        .load-inner.load-two {
+          right: 0%;
+          top: 0%;
+          border-right: 3px solid #f10d11;
+          animation: rotate2 1.15s 0.1s linear infinite;
+        }
+    
+        .load-inner.load-three {
+          right: 0%;
+          bottom: 0%;
+          border-top: 3px solid #1dec06;
+          animation: rotate3 1.15s 0.15s linear infinite;
+        }
+    
+        @keyframes rotate1 {
+          0% {
+            transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
+          }
+          100% {
+            transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
+          }
+        }
+    
+        @keyframes rotate2 {
+          0% {
+            transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+          }
+          100% {
+            transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg);
+          }
+        }
+    
+        @keyframes rotate3 {
+          0% {
+            transform: rotateX(-60deg) rotateY(0deg) rotateZ(0deg);
+          }
+          100% {
+            transform: rotateX(-60deg) rotateY(0deg) rotateZ(360deg);
+          }
+        }
+      </style> 
+    
+</head>
+
+<body>
+
+
+     <!-- Loader -->
+  <div id="loader">
+    <div class="loader">
+      <div class="load-inner load-one"></div>
+      <div class="load-inner load-two"></div>
+      <div class="load-inner load-three"></div>
+    
+    </div>
+  </div>
+
+    <div class="container">
+           <nav id="header">
+            
+                <div class="logo-box">
+                    <img src="boy.jpg" alt="Profile Picture">
+                    <span><i><h1>Arup</h1></i></span>
+                </div>
+
+            <div class="nav-logo">
+                <!-- <p class="nav-name">Portfolio</p> -->
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link"><i>Home</i></a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link"><i>About</i></a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link"><i>Projects</i></a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link"><i>Contact</i></a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Dark mode -->
+            <div class="mode">
+                <div class="moon-sun" id="toggle-switch">
+                    <i class="fa fa-moon" id="moon"></i>
+                    <i class="fa fa-sun" id="sun"></i>
+                </div>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav> 
+        <!-- main -->
+        <main class="wrapper">
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="hello">
+                        <p>Hello I,m</p>
+                    </div>
+                    <div class="featured-name">
+                        <span class="typedText"></span>
+                    </div>
+                    <div class="text-info">
+                        <p>My Name is Arup! I,m a web developer</p>
+                    </div>
+
+                    <div class="text-btn">
+                        <!-- Hire Me Button -->
+                        <button class="btn" onclick="location.href='https://www.linkedin.com/in/arup-maiti/'">
+                            Hire Me
+                        </button>
+
+                        <!-- Download Resume Button -->
+                        <a href="Arup resume.pdf" download="Your_Name_Resume.pdf">
+                            <button class="btn">
+                                Download Resume <i class="uil uil-file"></i>
+                            </button>
+                        </a>
+                    </div>
+
+
+                    <div class="socical_icons">
+                        <div class="icon_circle"></div>
+
+                        <div class="icon">
+                            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                        </div>
+
+
+                        <div class="icon">
+                            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://www.behance.net/yourprofile" target="_blank">
+                                <i class="uil uil-behance-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="icon">
+                            <a href="https://github.com/yourprofile" target="_blank">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="Boss.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- About Box -->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <figure class="about-me">
+                                <figcaption>
+                                    <img src="boy4.png" alt="" class="profile" />
+                                    <h2>Web developer</h2>
+                                    <p>My Name is Arup! I,m a web developer</p>
+                            </figure>
+
+                            <button class="about-me-btn"
+                                onclick="location.href='https://www.linkedin.com/in/arup-maiti/'">
+                                Hire Me
+                            </button>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-box">
+                            <span class="title">HTML</span>
+                            <div class="skill-bar ">
+                                <span class="skill-per html">
+                                    <span class="tooltip">80%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">CSS</span>
+                            <div class="skill-bar">
+                                <span class="skill-per css">
+                                    <span class="tooltip">70%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">JAVA SCRIPT</span>
+                            <div class="skill-bar">
+                                <span class="skill-per javascript">
+                                    <span class="tooltip">60%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">JAVA</span>
+                            <div class="skill-bar">
+                                <span class="skill-per java">
+                                    <span class="tooltip">50%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <span class="title">REACT</span>
+                            <div class="skill-bar">
+                                <span class="skill-per react">
+                                    <span class="tooltip">40%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Project Box -->
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="project-container">
+                    <div class="project-box">
+                        <!-- <i class="uil uil-briefcase-alt"></i> -->
+                            <img src="img2.png" alt="Startify image" height="150px" weight="100px">
+                        <h3> Stratify E-Commerce Platform </h3>
+                        <label><a href="https://stratify1.vercel.app/">Stratify E-Commerce</a></label>
+                    </div>
+
+                    <div class="project-box">
+                        <!-- <i class="uil uil-users-alt"></i>  -->
+                     <img src="img.png" alt="OTP Verification image" height="150px" weight="100px">
+                        <h3> OTP Verification System</h3>
+                        <label><a href="https://otp-verification-frontend.onrender.com">OTP Verification</a></label>
+                    </div>
+
+                    <div class="project-box">
+                        <!-- <i class="uil uil-award"></i> -->
+                        <img src="img3.png" alt="AiEngage image" height="150px" weight="100px">
+                        <h3> AiEngage </h3>
+                        <label></label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contact -->
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Let's Work Together</h1>
+                    <span>Do you have a Project in your mind, contact me here</span><br>
+                </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="contact-info">
+                <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
+                <p><i class="uil uil-envelope"></i><a
+                        href="mailto:arupmaiti2024@gmail.com?subject=Contact&body=Hii I am juniyer Devoloper">arupmaiti2024@gmail.com</a>
+                </p>
+
+                <p>
+                    <i class="uil uil-phone"></i>
+                    <a href="tel:0123456789">
+                        Phone:+91 0123456789
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col">
+            <form action="https://api.web3forms.com/submit" method="POST" class="form-control">
+
+                <input type="hidden" name="access_key" value="9f50dff0-2d17-4430-a399-6af8a22f3103">
+
+                <div class="form-inputs">
+                    <input type="text" name="name" class="input-field" placeholder="Your Name" required>
+                    <input type="text" name="email" class="input-field" placeholder="Your Email" required>
+                </div>
+                <div class="text-area">
+                    <input type="text" name="subject" class="input-subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="btn">Send<i class="uil uil-message"></i></button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    </section>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Project</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contect">Contect</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <div class="icon">
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <i class="uil uil-instagram"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.behance.net/yourprofile" target="_blank">
+                    <i class="uil uil-behance-alt"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://github.com/yourprofile" target="_blank">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+            </div>
+        </div>
+        <div class="button-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">CodeCreators</a> -All right reserved
+                2024</p>
+        </div>
+     </footer>
+ 
+    </div>
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="app.js"></script>
+
+ 
+
+
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").classList.add("hidden");
+      }, 3000); // Hide after 2 seconds
+    });
+  </script>
+
+
+  
+
+</body>
+
+</html>
